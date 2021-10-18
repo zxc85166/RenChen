@@ -1,0 +1,187 @@
+@mixin -text-($border-top_before, $border-top_after) {
+  &:before {
+    content: " ";
+    border-top: $border-top_before;
+    display: block;
+    position: absolute;
+    width: 100px;
+    top: 5px;
+    left: 200%;
+  }
+  &:after {
+    content: " ";
+    border-top: $border-top_after;
+    display: block;
+    position: absolute;
+    width: 100px;
+    top: 5px;
+    right: 200%;
+  }
+}
+
+.main {
+  background: -webkit-linear-gradient(
+      top,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0)
+    ),
+    url("https://images.pexels.com/photos/70741/cereals-field-ripe-poppy-70741.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+      center bottom no-repeat;
+  object-fit: cover;
+  flex-direction: column;
+  padding: 30px 100px;
+}
+.logo {
+  max-width: 90px;
+}
+.navigation {
+  display: flex;
+  li {
+    list-style: none;
+    a {
+      position: relative;
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+      margin-left: 40px;
+      font-weight: bolder;
+    }
+  }
+}
+.content {
+  position: relative;
+  width: 100%;
+  .text {
+    width: 100%;
+    max-width: 600px;
+    padding-left: 50px;
+    padding-top: 150px;
+    h1 {
+      font-size: 3em;
+      font-weight: bold;
+    }
+    h1:nth-child(2) {
+      padding-left: 30px;
+      padding-top: 20px;
+    }
+    span {
+      color: #852d04;
+    }
+  }
+}
+
+.about {
+  position: relative;
+  left: 20%;
+  background-image: url("../bg-g.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 100px;
+  .box {
+    margin-top: 5%;
+    background-color: #fff;
+    padding: 50px;
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.1);
+    h2 {
+      padding-top: 50px;
+      p {
+        line-height: 100px;
+        padding-top: 50px;
+        font-weight: 100;
+      }
+    }
+  }
+}
+.product {
+  background: #fefdf5;
+  height: 1000px;
+  position: relative;
+  > h2 {
+    position: absolute;
+    top: 60px;
+    text-align: center;
+    @include -text-(3px solid #f5d57b, 3px solid #f5d57b);
+  }
+  a {
+    position: absolute;
+    bottom: 5%;
+    background: #fdfdf5;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+.service {
+  background-image: url("../bg-g.png");
+  > h2 {
+    position: absolute;
+    top: 60px;
+    text-align: center;
+    @include -text-(3px solid #f5d57b, 3px solid #87947f);
+  }
+  > .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3em;
+    a {
+      display: flex;
+      position: relative;
+      bottom: 0;
+      width: 120px;
+      justify-content: center;
+      left: 30%;
+      top: 40px;
+    }
+  }
+}
+.value {
+  background-image: url("../bg-g.png");
+  height: 1000px;
+  > h2 {
+    position: absolute;
+    top: 60px;
+    text-align: center;
+    @include -text-(3px solid #87947f, 3px solid #87947f);
+  }
+}
+.contact {
+  background-image: url("https://images.pexels.com/photos/296282/pexels-photo-296282.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=1000");
+  // background-color: rgba(255, 255, 255, 0.6);
+  // background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 900px;
+  > h2 {
+    position: absolute;
+    top: 60px;
+    text-align: center;
+    @include -text-(3px solid #87947f, 3px solid #87947f);
+    margin-bottom: 0;
+  }
+  > p {
+    position: absolute;
+    top: 150px;
+    text-align: center;
+    margin-bottom: 0;
+    line-height: 25px;
+  }
+  > .formbox {
+    position: relative;
+    margin-top: 70px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    li {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

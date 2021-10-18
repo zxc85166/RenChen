@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+section {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  font-weight: bold;
+  width: 100%;
+}
+h2 {
+  font-size: 1.5em;
+  color: #5d5c5d;
+}
+input,
+select,
+textarea {
+  width: 300px;
+  height: 40px;
+  padding: 5px;
+  margin: 10px 0;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0px 3px 7px 6px rgba(0, 0, 0, 0.13);
+  -webkit-box-shadow: 0px 3px 7px 6px rgba(0, 0, 0, 0.13);
+  -moz-box-shadow: 0px 3px 7px 6px rgba(0, 0, 0, 0.13);
+}
+textarea {
+  height: 150px;
+}
+
+form {
+  padding-left: 15%;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}

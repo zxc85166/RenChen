@@ -1,0 +1,30 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  padding: 30px 100px 10px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+
+  > .login {
+    position: absolute;
+    right: 0;
+    top: 2px;
+    > ul {
+      display: flex;
+      li {
+        padding-right: 30px;
+      }
+      img {
+        margin-left: 10px;
+      }
+      a {
+        margin-top: 5px;
+      }
+    }
+  }
+}

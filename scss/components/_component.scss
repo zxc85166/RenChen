@@ -1,0 +1,173 @@
+$green: #58814b;
+$white: rgb(255, 255, 255);
+@mixin buttons {
+  position: relative;
+  display: inline-block;
+  padding: 10px 40px;
+  margin: 80px 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  @media screen and (max-width: 640px) {
+    width: 100%;
+  }
+}
+.card {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  margin: 20px 10px;
+  background: white;
+  box-shadow: 8px 8px 5px 0px rgba(189, 189, 189, 0.54);
+  -webkit-box-shadow: 8px 8px 5px 0px rgba(189, 189, 189, 0.54);
+  -moz-box-shadow: 8px 8px 5px 0px rgba(189, 189, 189, 0.54);
+  text-align: center;
+  &:hover {
+    border: solid green;
+  }
+  > img {
+    width: 100%;
+  }
+  > p {
+    position: relative;
+    margin-bottom: 0;
+  }
+  > span {
+    position: relative;
+    color: rgb(255, 0, 0);
+    margin-bottom: 0;
+  }
+  > a {
+    position: absolute;
+    bottom: 10px;
+    left: 25%;
+  }
+}
+.btn {
+  @include buttons;
+  background: green;
+  color: white;
+  font-weight: 400;
+}
+.btn-a {
+  @include buttons;
+  color: green;
+  background: white;
+  font-weight: bold;
+  border: solid green;
+  &:hover {
+    background: green;
+    color: white;
+  }
+}
+.btn-b {
+  @include buttons;
+  position: absolute;
+  color: green;
+  margin: 0;
+  background: white;
+  font-weight: bold;
+  padding: 10px 10px;
+  border: solid green;
+  &:hover {
+    background: green;
+    color: white;
+  }
+}
+.btn-c {
+  @include buttons;
+  position: absolute;
+  color: white;
+  margin: 0;
+  background: #7c9d6e;
+  font-weight: bold;
+  padding: 2px 15px;
+  border-radius: 0px;
+  &:hover {
+    background: #7c9d6e;
+    color: white;
+  }
+}
+.btn-form {
+  margin-top: 20px;
+  margin-left: auto;
+  cursor: pointer;
+}
+.circle {
+  position: relative;
+  > img {
+    padding: 10px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: dashed #f5d57b;
+  }
+  > a {
+    position: absolute;
+  }
+}
+.circle-big {
+  position: relative;
+  shape-outside: circle;
+  > img {
+    padding: 10px;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+  }
+}
+.circle_ontainer {
+  position: relative;
+
+  .circle-sm {
+    position: absolute;
+    &:nth-child(2) {
+      left: 450px;
+      bottom: 200px;
+    }
+    &:nth-child(3) {
+      left: 420px;
+      top: 300px;
+    }
+    &:nth-child(4) {
+      right: 450px;
+      bottom: 200px;
+    }
+    &:nth-child(5) {
+      right: 420px;
+      top: 300px;
+    }
+    &:nth-child(6) {
+      left: 100px;
+      top: 450px;
+    }
+    > img {
+      padding: 10px;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+    }
+  }
+}
+.search-container {
+  position: relative;
+  input[type="text"] {
+    padding: 6px;
+    margin-top: 8px;
+    padding-right: 20px;
+    font-size: 17px;
+    border: 1px solid #ccc;
+    box-shadow: none;
+    text-align: end;
+  }
+  button {
+    left: 17%;
+    top: 20%;
+    color: #435117;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    padding: 6px 10px;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+}

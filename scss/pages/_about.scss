@@ -1,0 +1,30 @@
+.content-1 {
+  width: 100%;
+  background-color: #fefcf4;
+  > p {
+    position: absolute;
+    top: 15px;
+    left: 20%;
+  }
+  span {
+    margin-left: 20px;
+    font-size: 1.5em;
+  }
+  .box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.content-2 {
+  width: 100%;
+  background-image: url("../bg-g.png");
+  > p {
+    position: absolute;
+    top: 15px;
+    left: 20%;
+  }
+  .box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
